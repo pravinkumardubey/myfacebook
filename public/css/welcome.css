@@ -1,0 +1,16 @@
+#main{
+	height: 300px;width: 300px;background: #eee;margin: 0px auto;
+}input{
+	height: 20px;width: 200px;background: transparent;text-align: center;
+	margin-top: 15px;margin-left: 50px;
+}input[type=submit]{
+	background: blue;color: #fff;cursor: pointer;
+}#images{
+	height: 300px;width: 80%;margin: 0px auto;background: pink;
+	border: 5px solid #ccc;
+	overflow: auto;
+}h3{
+	text-decoration: underline;
+}img{
+	height: 100px;width: 100px;
+}

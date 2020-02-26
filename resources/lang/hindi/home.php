@@ -1,0 +1,26 @@
+<?php
+return [
+	'category'=>'श्रेणियां',
+	'blob'=>'बूँद जोड़ें',	
+	'view_blob'=>'बूँद देखें',
+	'view'=>'देखें',
+	'logout'=>'लॉग आउट',
+	'usersLable' => 'कुल उपयोगकर्ता',
+	'totalCategoryLable' => 'कुल श्रेणी',
+	'totalBlobsLable' => 'कुल ब्लॉब्स',
+	'home'=>'घर',
+	'languageLable'=>'भाषा',
+	'hello'=>'स्वागतम',
+	'like'=>'पसंद',
+	'unlike'=>'नापसन्द',
+	'comment'=>'टिप्पणी',
+	'view_comment'=>'टिप्पणी देखें',
+	'post'=>'पद',
+	'search'=>'खोज',
+	'category_name'=>'श्रेणी नाम',
+	'id'=>'पहचान',
+	'type'=>'प्रकार',
+	'edit'=>'संपादित करें',
+	'delete'=>'हटाना',
+	'add'=>'जोड़ना'
+];

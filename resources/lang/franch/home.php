@@ -1,0 +1,26 @@
+<?php
+return [
+	'category'=>'Catégories',
+	'blob'=>'Ajouter un blob',
+	'view_blob'=>'Afficher le blob',
+	'view'=>'Voir',
+	'logout'=>'Se déconnecter',
+	'usersLable'=>'Nombre total dutilisateurs',
+	'totalCategoryLable'=>'totalCategoryLable',
+	'totalBlobsLable'=>'Total des blobs',
+	'home'=>'Accueil',
+	'languageLable'=>'Langue',
+	'hello'=>'Bienvenue',
+	'like'=>'comme',
+	'unlike'=>'Ne pas aimer',
+	'comment'=>'commentaire',
+	'view_comment'=>'voir le commentaire',
+	'post'=>'Publier',
+	'search'=>'chercher',
+	'category_name'=>'Nom de catégorie',
+	'id'=>'identité',
+	'type'=>'type',
+	'edit'=>'Éditer',
+	'delete'=>'supprimer',
+	'add'=>'ajouter'
+];
