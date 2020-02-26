@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="main">
-		<h2 align="center">Registration Here</h2>
+		<h2 align="center">Registration Here2</h2>
 	<form id="myForm" enctype="multipart/form-data">
 	   	<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 		<input type="text" name="name" placeholder="Enter Name"><br>
