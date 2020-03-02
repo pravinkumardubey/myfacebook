@@ -49,14 +49,12 @@ function getAllData(){
 		var string = JSON.stringify(response);
 		//console.log(string);
 		console.log(response.data);
-
 		for (var i = 0; i < response.data.length; i++) {
 			var name = response.data[i].name;
 			var dob = response.data[i].dob;
 			var email  = response.data[i].email;
 			var contact  = response.data[i].contact;
 			var file  = response.data[i].file;
-
 			htmlData += '<tr>'+
 				'<th>'+(i+1)+'</th>'+
 				'<th>'+name+'</th>'+

@@ -39,7 +39,7 @@ Route::post('validateLogin','UserController@validateLogin')->name('validateLogin
      * 
      */
 
-Route::get('dashboard','UserController@dashboard')->name('dashboard');
+Route::get('dashboard1','UserController@dashboard')->name('dashboard')->middleware('route');
 
 /**
      * The declare route deletecategory use for delete data with id $id
@@ -65,7 +65,7 @@ Route::get('deleteblob/{id}','PostController@deleteBlob');
      * 
      */
 
-Route::get('category','CategoryController@index')->name('category');
+Route::get('category','CategoryController@index')->name('category')->middleware('route');
 
 
 /**
@@ -73,7 +73,7 @@ Route::get('category','CategoryController@index')->name('category');
      * 
      */
 
-Route::get('addcategory','CategoryController@addcategory')->name('addcategory');
+Route::get('addcategory','CategoryController@addcategory')->name('addcategory')->middleware('route');
 
 /**
      * The declare route addingcategory use for add category
@@ -89,7 +89,7 @@ Route::post('addingcategory','CategoryController@addingcategory');
 
 
 
-Route::get('blobs','CategoryController@blobs')->name('blobs');
+Route::get('blobs','CategoryController@blobs')->name('blobs')->middleware('route');
 
 /**
      * The declare route selecttype use for dyanmic select box
@@ -114,7 +114,7 @@ Route::post('add-description','PostController@formGroup');
      */
 
 
-Route::get('bloblist','PostController@bloblist')->name('bloblist')->middleware('auth');;
+Route::get('bloblist','PostController@bloblist')->name('bloblist')->middleware('route');
 
 
 /**
@@ -139,7 +139,7 @@ Route::get('editblob/{id}','PostController@editBlob')->name('editblob');
      */
 
 
-Route::get('viewdesc','PostController@viewdesc')->middleware('auth');
+Route::get('viewdesc','PostController@viewdesc')->name('viewdesc')->middleware('route');
 
 /**
      * The declare route updatedescription use for update post 
@@ -208,7 +208,7 @@ Route::post('/updatecomment','CommentController@updateMessage');
 Route::get('locale/{locale}','UserController@languages');
 
 
-
+Route::get('/download/{img}', 'PostController@getDownload');
 //============================Nwe Project=========================//
 
 
@@ -221,3 +221,5 @@ Route::post('store','NewRegController@store');
 Route::post('getData','NewRegController@getData');
 
 Route::get('delete/{id}','NewRegController@deleteData');
+Route::view('xyz','new.loginNew');
+Route::post('xyz','NewRegController@xyz')->name('xyz');

@@ -1,0 +1,23 @@
+.uploadImage:hover{
+	cursor: pointer;
+}
+#download{
+	position: absolute;right: 40px;
+	bottom: 15px;text-decoration: underline;
+}
+#download:hover a{
+	color: tomato;
+}
+.welcome{
+	background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+	animation: title 2s linear infinite;font-size: 30px;
+	font-weight: bolder;text-transform: capitalize;
+}
+@keyframes title{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 300px;
+	}
+}

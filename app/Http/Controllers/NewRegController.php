@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\NewRegRequest;
 use App\NewReg;
+use Illuminate\Support\Facades\Auth;
 class NewRegController extends Controller
 {
     function index(){
@@ -23,9 +24,17 @@ class NewRegController extends Controller
     {
         $res = NewReg::orderByRaw('id DESC')->get();
         return response()->json(['data'=>$res]);
-       
     }
     function deleteData($id){
         NewReg::find($id)->delete();
+    }
+    function xyz(Request $req){
+        $data=array('email'=>$req->email,'password'=>$req->pass);
+        $req->session()->put('new',$req->email);
+        if (Auth::attempt($data)) {
+            echo "done";
+        }else{
+            echo "error";
+        }
     }
 }

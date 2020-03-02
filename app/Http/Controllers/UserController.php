@@ -34,7 +34,7 @@ class UserController extends Controller
             'email'=>$request->input('email'),
             'password'=>$request->input('password')
         );
-        $request->session()->put('user',$request->input('email'));
+        //$request->session()->put('user',$request->input('email'));
         if (Auth::attempt($data)) {
             return redirect()->route('dashboard');
         }

@@ -32,6 +32,7 @@ function post(arg,id){
             	$('label').hide();
             	$('.com').show();
             	$(arg).parent().prev().prev().html(data);
+            	$(arg).prev().val("");
             }
 		});
 	}
@@ -144,3 +145,15 @@ function updateComment(arg,id){
 setInterval(function(){
 	$('.btn-danger').attr('class','btn-primary');
 },2000);
+function writeUser(arg){
+	$(arg).css("border","2px solid green");
+}
+
+
+$(document).mouseup(function(e){
+	var con=$('.viewcomment');
+	console.log(con.has(e.target));
+	if (!con.is(e.target) && con.has(e.target).length == 0) {
+		con.fadeOut();
+	}
+});

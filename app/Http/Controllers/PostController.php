@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use Response;
 use DB;
 class PostController extends Controller
 {
@@ -83,5 +84,10 @@ class PostController extends Controller
             ->where('id', $id)
             ->update(['category_id' => $id,'title'=>$name,'description'=>$type]);
         return redirect()->route('bloblist');
+    }
+    public function getDownload($img){
+        //PDF file is stored under project/public/download/info.pdf
+        $file="uploads/$img";
+        return Response::download($file);
     }
 }
