@@ -7,6 +7,8 @@ use DB;
 use Session;
 use App\Register;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
 class UserController extends Controller
 {
     /**
@@ -16,10 +18,10 @@ class UserController extends Controller
      * 
      */
     function index(Request $request){
-        $save = Register::saveUser($request);
-        if ($save) {
-            echo "saved";
-        }
+        //Register::saveUser($request);
+        $name=$request->name;
+        return Mail::to($request->email)->send(new SendMail($name));
+        
     }
 
     /**

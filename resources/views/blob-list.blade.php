@@ -33,7 +33,7 @@
         <td>{{ $use->title }}</td>
         <td>{{ $use->description }}</td>
         <td><a href="{{ route('editblob',['id'=>$use->id]) }}">edit</td>
-        <td onclick="deleteBlob(this,'{{ $use->id }}')">delete</td>
+        <td><div onclick="deleteBlob(this,'{{ $use->id }}')">delete</div></td>
       </tr>
       @endforeach
     </tbody>

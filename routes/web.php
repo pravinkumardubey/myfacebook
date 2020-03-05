@@ -39,7 +39,7 @@ Route::post('validateLogin','UserController@validateLogin')->name('validateLogin
      * 
      */
 
-Route::get('dashboard1','UserController@dashboard')->name('dashboard')->middleware('route');
+Route::get('dashboard','UserController@dashboard')->name('dashboard')->middleware('route');
 
 /**
      * The declare route deletecategory use for delete data with id $id
@@ -206,7 +206,10 @@ Route::post('/updatecomment','CommentController@updateMessage');
 	*
 	*/
 Route::get('locale/{locale}','UserController@languages');
-
+/**
+     * The declare route is use for download image
+     *
+     */
 
 Route::get('/download/{img}', 'PostController@getDownload');
 //============================Nwe Project=========================//
@@ -214,12 +217,9 @@ Route::get('/download/{img}', 'PostController@getDownload');
 
 
 
-Route::get('welcome','NewRegController@index')->name('welcome');
+Route::get('addUser','AddUserController@index');
 
-Route::post('store','NewRegController@store');
 
-Route::post('getData','NewRegController@getData');
+Route::post('form_action','AddUserController@create');
 
-Route::get('delete/{id}','NewRegController@deleteData');
-Route::view('xyz','new.loginNew');
-Route::post('xyz','NewRegController@xyz')->name('xyz');
+Route::get('check_email/{email}','AddUserController@checkEmail');

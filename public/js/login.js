@@ -48,7 +48,7 @@ function deleteBlob(arg,id) {
                     _token:'{{ csrf_token() }}'
                 },
 		success:function(data){
-			$(arg).parent().remove();
+			$(arg).parent().parent().remove();
 		}
 	});
 }
