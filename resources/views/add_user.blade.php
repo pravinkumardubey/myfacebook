@@ -12,7 +12,7 @@
 	@csrf
 	<ol id="mylist">
 	  <li>
-		<input type="text" name="username[]" id="username1" placeholder="Enter Your UserName" onkeyup="checkEmail(this)">
+		<input type="text" name="username[]" id="username1" placeholder="Enter Your UserName" onchange="checkEmail(this)">
 		<input type="text" name="age[]" id="age1" placeholder="Enter your age">
 		<input type="password" name="password[]" id="password1" placeholder="Enter Password">
 	  </li>

@@ -6,16 +6,13 @@
 </head>
 <body>
 	<div id="main">
-		@if($errors)
-
-		@endif
 			<a href="welcome">Role</a>
 			<a href="module-list">Module</a>
 			<a href="role-assign-model">Role Assign Module</a>
 			<a href=""></a>
-			<form action="{{route('create-roll')}}" method="post">
+			<form action="create-module">
 				@csrf
-				<input type="text" name="role">
+				<input type="text" name="module">
 				<input type="submit">
 			</form>
 		<table>
@@ -24,11 +21,11 @@
 				<th>Role</th>
 				<th>Edit</th>
 			</tr>
-			@foreach($role as $roles)
+			@foreach($modules as $module)
 			<tr>
-				<th>{{ $roles->id }}</th>
-				<th>{{ $roles->role }}</th>
-				<th><a href="edit-role/{{ $roles->id }}">edit</a></th>
+				<th>{{ $module->id }}</th>
+				<th>{{ $module->module_name }}</th>
+				<th><a href="edit-module/{{ $module->id }}">edit</a></th>
 			</tr>
 
 			@endforeach

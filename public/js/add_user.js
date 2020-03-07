@@ -47,6 +47,9 @@ function myForm(){
           data:$('#myform').serialize(),
           success:function(data){
             alert("Success");
+            $('#myform').each(function(){
+              this.reset();
+            });
           }
         });
       }
@@ -63,7 +66,12 @@ function checkEmail(arg){
       _token:'{{ csrf_token() }}'
     },  
     success:function(data){
-      console.log(data);
+      if (data==1) {
+        $(arg).css("border","2px solid red");
+        $(arg).focus();
+      }else{
+         $(arg).css("border","2px solid green");
+      }
     }
   });
 }
